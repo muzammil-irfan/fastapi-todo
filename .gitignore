@@ -80,5 +80,4 @@ ipython_config.py
 
 # pipenv
 .Pipfile.lock
-
-streamlit
+.venv
