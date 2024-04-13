@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from models import Base
+from sqlalchemy.orm import Session
 
 SQLALCHEMY_DATABASE_URL = "postgresql://muzammil-irfan:Wb1B0PjaxykM@ep-bold-credit-a421szht.us-east-1.aws.neon.tech/neondb?sslmode=require"
 
@@ -15,7 +16,7 @@ def get_session():
     return SessionLocal()
 
 def get_db():
-    db = get_session()
+    db : Session = get_session()
     try:
         yield db
     finally:

@@ -7,6 +7,7 @@ from models.user import User
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
 from services.auth_utils import ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token
+from models.todo import Todo
 
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
